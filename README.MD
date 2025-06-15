@@ -7,7 +7,7 @@
 
 ## ✨ Fonctionnalités
 
-- 🔐 Connexion à l'API GitHub avec token personnel (via variable d’environnement `TOKEN`)
+- 🔐 Connexion à l'API GitHub avec token personnel (via variable d’environnement `GITHUB_TOKEN`)
 - 🧑 Affichage des infos utilisateur : nom, entreprise, nombre de dépôts, followers, etc.
 - 📊 Analyse d’événements : `PushEvent`, `PullRequestEvent`, `IssuesEvent`, `ForkEvent`, etc.
 - 📦 Filtrage du nombre d’événements à afficher (`--max_events`)
@@ -30,11 +30,12 @@
    ```bash
    git clone https://github.com/Gitb2pic/Github_event.git
    cd Github_event
+````
 
 2. **Définir un token GitHub (optionnel mais recommandé)**
 
    ```bash
-   export TOKEN=your_personal_access_token
+   export GITHUB_TOKEN=your_personal_access_token
    ```
 
 ---
@@ -55,34 +56,6 @@ python main.py torvalds --max_events 3
 
 ---
 
-## 📄 Résultat attendu
-
-```
-🔍 ANALYSE DES ÉVÉNEMENTS GITHUB
-============================================================
-👤 PROFIL UTILISATEUR
-📛 Nom: Linus Torvalds
-🏢 Entreprise: Linux Foundation
-📍 Localisation: Portland, OR
-📦 Dépôts publics: 6
-👥 Followers: 157000
-👤 Following: 0
-📅 Compte créé le: 22/09/2011 à 19:44:00 UTC
-
-📊 ÉVÉNEMENTS RÉCENTS DE TORVALDS
-============================================================
-
-🔹 ÉVÉNEMENT #1
-📅 Date/Heure: 10/06/2025 à 14:15:22 UTC
-🏷️  Type d'événement: PushEvent
-📦 Dépôt: torvalds/linux
-🆔 ID de l'événement: 345678...
-
-...
-```
-
----
-
 ## 📁 Structure du projet
 
 ```
@@ -96,12 +69,27 @@ Github_event/
 
 ## ✅ Astuces
 
-* Pour éviter les erreurs 403, utilisez un token GitHub (`TOKEN`)
+* Pour éviter les erreurs 403, utilisez un token GitHub (`GITHUB_TOKEN`)
 * L’outil ne récupère que les **événements publics**
 * Vous pouvez modifier `max_events` par défaut dans le fichier `main.py`
 
 ---
 
+## 🔗 Projets similaires et inspiration
+
+Ce projet s’inspire ou peut évoluer vers des outils similaires comme :
+
+* [GitHub User Activity Tracker — roadmap.sh](https://roadmap.sh/projects/github-user-activity)
+
+> Tu peux t’en inspirer pour ajouter une interface graphique, un backend web, ou encore des exports CSV/JSON complets.
+
+---
+
+## 📜 Licence
+
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) si présent.
+
+---
 
 ## 🙌 Auteurs & Contributions
 
