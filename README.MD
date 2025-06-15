@@ -7,7 +7,7 @@
 
 ## ✨ Fonctionnalités
 
-- 🔐 Connexion à l'API GitHub avec token personnel (via variable d’environnement `GITHUB_TOKEN`)
+- 🔐 Connexion à l'API GitHub avec token personnel (via variable d’environnement `TOKEN`)
 - 🧑 Affichage des infos utilisateur : nom, entreprise, nombre de dépôts, followers, etc.
 - 📊 Analyse d’événements : `PushEvent`, `PullRequestEvent`, `IssuesEvent`, `ForkEvent`, etc.
 - 📦 Filtrage du nombre d’événements à afficher (`--max_events`)
@@ -30,7 +30,6 @@
    ```bash
    git clone https://github.com/Gitb2pic/Github_event.git
    cd Github_event
-````
 
 2. **Définir un token GitHub (optionnel mais recommandé)**
 
